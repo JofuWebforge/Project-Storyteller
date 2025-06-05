@@ -21,7 +21,7 @@ function App() {
           <Route path="/*" element={
             <Layout>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/\" element={<Home />} />
                 <Route path="/graphs" element={
                   <ProtectedRoute>
                     <Graphs />
