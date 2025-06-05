@@ -1,0 +1,202 @@
+# KnowledgeNexus MVP: Product Requirements Document (PRD)
+
+## Project Overview
+
+KnowledgeNexus is a SaaS learning platform powered by knowledge graphs that allows users to create, visualize, and interact with knowledge graphs while transforming them into engaging narratives with AI-generated stories, voice narration, and illustrative images.
+
+## Vision Statement
+
+To transform static learning and creative development into dynamic exploration by visualizing connections between concepts, actively expanding understanding through interactive knowledge graphs, and enabling users to transform their knowledge structures into engaging narratives and visual experiences.
+
+## Target Users
+
+- Educators in higher education
+- Instructional designers  
+- Students in advanced programs
+- Self-directed learners
+- Knowledge management professionals
+- Creative writers and storytellers
+- Tabletop role-playing game masters
+- Transmedia content creators
+
+## Key Features (MVP)
+
+### Knowledge Graph Core Features
+1. Knowledge Graph Creation and Editing
+2. Node Content Management (text and images)
+3. Relationship Definition and Visualization
+4. Graph Exploration and Navigation
+5. Basic Search and Filtering
+6. User Account Management
+7. Graph Sharing and Collaboration (basic)
+8. Template Library (limited)
+
+### AI Story Generation Features
+9. AI Story Generation with Voice and Images
+10. Multi-node selection for story creation
+11. Story type and mode configuration
+12. Voice narration via ElevenLabs
+13. Illustrative images via OpenAI GPT-4.1
+14. Story saving and sharing
+
+## Technical Requirements
+
+### Tech Stack
+- Frontend: React with TypeScript, Vite, Tailwind CSS
+- Graph Visualization: vis.js Network
+- Backend: Supabase (PostgreSQL, Authentication, Storage, Edge Functions)
+- AI Workflow Automation: N8N
+- Payment Processing: Stripe
+- Hosting: Vercel (frontend) + Supabase (backend)
+
+### Data Architecture
+- PostgreSQL JSONB for flexible graph data storage
+- Supabase Storage for media files
+- Row Level Security (RLS) for access control
+- Real-time subscriptions for collaborative features
+
+### AI Integrations
+- Text Generation: OpenAI API (GPT-4.1)
+- Voice Synthesis: ElevenLabs API
+- Image Generation: OpenAI API (DALL-E)
+
+## MVP Scope
+
+### In Scope
+1. User registration and authentication
+2. Knowledge graph creation with nodes and relationships
+3. Rich content management (text and images)
+4. Interactive graph visualization
+5. Basic search and filtering
+6. Graph sharing (public/private)
+7. Template library (5-10 pre-built templates)
+8. AI story generation from selected nodes
+9. Voice narration and image generation
+10. Story management and sharing
+
+### Out of Scope for MVP
+- Advanced API integrations
+- Mobile applications
+- Real-time collaborative editing
+- LMS integrations
+- Custom visual themes
+- Offline capabilities
+- Video generation
+- Interactive branching narratives
+
+## User Stories
+
+### Knowledge Graph Management
+- As an educator, I want to create knowledge graphs to visualize complex domains
+- As a user, I want to add nodes with text and images to represent concepts
+- As a user, I want to connect nodes with labeled relationships
+- As a learner, I want to explore graphs through intuitive navigation
+
+### AI Story Generation
+- As a user, I want to select multiple nodes to generate stories
+- As an educator, I want different story types for varied experiences
+- As a user, I want voice narration for audible content
+- As a user, I want AI-generated images to enhance storytelling
+
+### Collaboration and Sharing
+- As an educator, I want to share graphs with students via links
+- As a user, I want to control graph privacy settings
+- As a creative professional, I want to collaborate on knowledge structures
+
+## Technical Implementation Phases
+
+### Phase 1: Core Graph Features
+- Supabase setup (database, auth, storage)
+- React app with TypeScript and Tailwind
+- Basic graph visualization with vis.js
+- Node and relationship CRUD operations
+- User authentication and profiles
+
+### Phase 2: AI Integration
+- N8N workflow setup for AI services
+- Story generation from selected nodes
+- Voice synthesis integration
+- Image generation capabilities
+- Story management interface
+
+### Phase 3: Enhanced Features
+- Advanced search and filtering
+- Template library
+- Improved sharing and collaboration
+- Performance optimizations
+
+### Phase 4: Monetization
+- Stripe integration for subscriptions
+- Usage-based billing for AI features
+- Premium templates and features
+
+## Success Metrics
+
+### User Engagement
+- 40%+ of users create at least one graph
+- 30%+ return within one week
+- 30%+ try story generation feature
+- Average 3+ stories per month per active user
+
+### Performance
+- 95% of page loads under 3 seconds
+- 99% of interactions under 200ms
+- 90%+ successful story generation rate
+- 95%+ successful voice narration rate
+
+### Satisfaction
+- Net Promoter Score (NPS) of 30+
+- 70%+ rate ease of use as "Good" or better
+- 70%+ satisfaction with generated stories
+
+## Non-Functional Requirements
+
+### Performance
+- Support 1,000 concurrent users
+- Handle graphs up to 100 nodes
+- Generate stories within 60 seconds
+- Voice narration within 60 seconds
+
+### Security
+- HTTPS for all communications
+- Encrypted passwords and sensitive data
+- Input validation and CSRF protection
+- Secure API key management
+
+### Usability
+- Intuitive interface without training needed
+- WCAG 2.1 AA accessibility compliance
+- Responsive design for desktop and tablet
+- Clean, minimalist design aesthetic
+
+## Limitations and Constraints
+
+### MVP Limitations
+- Maximum 100 nodes per graph
+- Maximum 50 graphs per user
+- Maximum 5MB image uploads
+- 100MB total storage per user
+- 10 AI stories per day per user
+- Maximum 2,000 words per story
+- Web browser access only
+
+### Technical Constraints
+- Standard web hosting infrastructure
+- Compliance with data protection regulations
+- Reasonable performance on standard hardware
+- API cost management for AI services
+
+## Future Considerations
+
+### Post-MVP Features
+- API integration hub
+- Web search integration
+- AI-assisted content suggestions
+- Real-time collaborative editing
+- Mobile applications
+- Advanced analytics
+- Interactive narratives
+- Video generation
+- Custom voice training
+
+This PRD serves as the foundation for building KnowledgeNexus MVP with a focus on core knowledge graph functionality enhanced by AI-powered storytelling capabilities, all implemented using a minimal but powerful tech stack centered around React, Supabase, N8N, and Stripe.
